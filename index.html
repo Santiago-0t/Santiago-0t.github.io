@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Santiago Otalvaro · Desarrollador full stack</title>
+  <meta name="description" content="Portafolio de Santiago Otalvaro Ortega: desarrollador full stack (Django + Angular, Oracle y PostgreSQL) e investigador en inteligencia artificial.">
+  <meta property="og:title" content="Santiago Otalvaro · Desarrollador full stack">
+  <meta property="og:description" content="Proyectos, investigación y trayectoria.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23191919'/><text x='50' y='72' font-size='64' text-anchor='middle' fill='%23B77E64' font-family='serif'>創</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Noto+Sans+JP:wght@300;500&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+
+<header class="bar">
+  <a class="brand" href="#top"><span class="jp">創</span> Santiago Otalvaro</a>
+  <nav>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#investigacion">Investigación</a>
+    <a href="#trayectoria">Trayectoria</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <button class="theme" type="button" aria-label="Cambiar tema claro u oscuro">◐</button>
+</header>
+
+<main id="top">
+
+  <!-- 00 COVER -->
+  <section class="hero">
+    <div class="meta">00 // PORTAFOLIO · RIONEGRO, ANTIOQUIA</div>
+    <h1>Construyo software que <em>sale a producción</em>.</h1>
+    <p class="lede">Soy desarrollador full stack en formación (SENA) y practicante en la Universidad Católica de Oriente. Migro sistemas heredados a Django + Angular sobre Oracle y PostgreSQL, y trabajo con flujos de múltiples agentes de IA. También investigo: soy autor principal del artículo <a href="#investigacion">LuxSense</a>.</p>
+    <p class="jp-line"><span class="jp">作ることと、学ぶこと。</span> <span class="mono">// Construir y aprender.</span></p>
+    <div class="actions">
+      <a class="btn primary" href="#proyectos">Ver proyectos</a>
+      <a class="btn" href="cv-santiago-otalvaro.pdf" download>Descargar hoja de vida</a>
+    </div>
+    <dl class="stats">
+      <div><dt>+250</dt><dd>pull requests integrados</dd></div>
+      <div><dt>~5.000</dt><dd>inscripciones al año en el proceso que migré</dd></div>
+      <div><dt>18</dt><dd>proyectos siguen la norma que coescribí</dd></div>
+      <div><dt>1</dt><dd>artículo publicado como autor principal</dd></div>
+    </dl>
+  </section>
+
+  <!-- 01 PROYECTOS -->
+  <section id="proyectos" class="section">
+    <div class="section-head">
+      <span class="kanji" aria-hidden="true">作</span>
+      <div class="meta">01 // PROYECTOS</div>
+      <h2>Lo que he construido</h2>
+      <p class="note">El código de la universidad es interno; aquí cuento el problema, lo que hice y el resultado.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="meta">01 // SIEPCI <span class="tag">PRODUCCIÓN</span></div>
+        <h3>Inscripciones del Centro de Idiomas y Educación Permanente</h3>
+        <p>Migración de un sistema en PowerBuilder a Django + Angular sobre el mismo esquema Oracle de producción. Construí los módulos de personas, catálogo, calificaciones y facturación.</p>
+        <ul class="facts"><li><b>~5.000</b> inscripciones al año</li><li><b>535</b> usuarios vinculados</li><li><b>116</b> usuarios con rol</li></ul>
+        <div class="stack">Django · Angular · Oracle · Microsoft Entra ID</div>
+      </article>
+
+      <article class="card">
+        <div class="meta">02 // SIEVENTOS <span class="tag">PRODUCCIÓN</span></div>
+        <h3>Eventos de pago con inscripción a programas</h3>
+        <p>Creé el proyecto y lo llevé a producción: eventos de la universidad convertidos en un canal de inscripción, con tarifa especial y pago en línea.</p>
+        <ul class="facts"><li><b>6</b> eventos</li><li><b>67</b> inscripciones</li><li><b>43</b> pagos en línea</li></ul>
+        <div class="stack">Django · Angular · Oracle · Docker Compose</div>
+      </article>
+
+      <article class="card">
+        <div class="meta">03 // SIBE <span class="tag">MIGRACIÓN</span></div>
+        <h3>Bienestar y Evangelización</h3>
+        <p>Migración de Java a Django + Angular 21 en nueve fases, con ensayo de corte sobre una copia de producción. Inicio de sesión con Entra ID y rediseño accesible con Angular Material.</p>
+        <ul class="facts"><li><b>9</b> fases</li><li><b>73</b> pull requests</li><li><b>WCAG AA</b></li></ul>
+        <div class="stack">Django · Angular · PostgreSQL · Angular Material</div>
+      </article>
+
+      <article class="card">
+        <div class="meta">04 // LINEAMIENTOS <span class="tag">NORMA</span></div>
+        <h3>La norma de desarrollo de la universidad</h3>
+        <p>Principal contribuidor de los lineamientos institucionales de desarrollo de software: arquitectura, registro de eventos, decisiones de base de datos y entorno de trabajo.</p>
+        <ul class="facts"><li><b>16</b> versiones en dos meses</li><li><b>18</b> proyectos la adoptan</li><li><b>+50 %</b> de los cambios</li></ul>
+        <div class="stack">Documentación · Arquitectura · CI</div>
+      </article>
+
+      <article class="card">
+        <div class="meta">05 // INSCRIPCIONES ACADÉMICO</div>
+        <h3>Portal del aspirante y panel administrativo</h3>
+        <p>Migración completa de la interfaz a PrimeNG con un tema institucional basado en tokens y pruebas automáticas de contraste.</p>
+        <div class="stack">Angular · PrimeNG · Pruebas de accesibilidad</div>
+      </article>
+
+      <article class="card">
+        <div class="meta">06 // EVE <span class="tag">EN DESARROLLO</span></div>
+        <h3>Unificación de los sistemas de eventos</h3>
+        <p>Diseño de la arquitectura y el modelo de datos del sistema que une SIEventos y SIGEV. El backend de eventos gratuitos está listo; ahora construyo el de pago.</p>
+        <div class="stack">Django · Entra ID · Arquitectura</div>
+      </article>
+    </div>
+
+    <aside class="callout">
+      <span class="kanji small" aria-hidden="true">機</span>
+      <div>
+        <div class="meta">EN CURSO // LINUX + AGENTES DE IA</div>
+        <p>Impulso la migración a Linux de los equipos de desarrollo para trabajar con varios agentes de IA en paralelo, algo que bajo WSL tenía un rendimiento limitado.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- 02 INVESTIGACION -->
+  <section id="investigacion" class="section">
+    <div class="section-head">
+      <span class="kanji" aria-hidden="true">研</span>
+      <div class="meta">02 // INVESTIGACIÓN</div>
+      <h2>Ciencia aplicada</h2>
+    </div>
+
+    <article class="paper">
+      <div class="meta">PUBLICACIÓN // REVISTA CIENCIOMETRIK · VOL. 4, N.º 6 · 2026</div>
+      <h3>LuxSense: sistema inteligente de automatización de iluminación con machine learning para optimización energética en instituciones educativas</h3>
+      <p>Sensores IoT, análisis exploratorio de datos y regresión lineal para optimizar la iluminación de una sede piloto del SENA. Resultado estimado: una reducción de <b>12 a 18 toneladas de CO₂</b> al año por sede.</p>
+      <p class="authors"><b>Santiago Otalvaro Ortega</b> (autor principal), Juan Sebastián Arbeláez, Alejandro Montoya, Andrés Felipe García, Daniel Mateo Pamplona, Yari Ferley Ruiz y Haddy Moreno Agualimpia. pp. 23–27 · ISSN 2981-5533.</p>
+      <a class="link" href="https://drive.google.com/file/d/1Tw17IZYcgMOUj2GJ3l3n4tSb70sNP0Ea/view?usp=drive_link" target="_blank" rel="noopener">Leer artículo ↗</a>
+    </article>
+
+    <ol class="awards">
+      <li><span class="mono">2026</span> 4.º puesto · Encuentros Zonales de Semilleros de Investigación (evento nacional, Montería)</li>
+      <li><span class="mono">2026</span> Presentación del perfil de investigación «DataSense» · Encuentro regional de investigadores</li>
+      <li><span class="mono">2025</span> 2.º puesto · Feria regional de investigación</li>
+      <li><span class="mono">2025</span> Mejor proyecto de grado en nuevas tecnologías</li>
+    </ol>
+  </section>
+
+  <!-- 03 TRAYECTORIA -->
+  <section id="trayectoria" class="section">
+    <div class="section-head">
+      <span class="kanji" aria-hidden="true">道</span>
+      <div class="meta">03 // TRAYECTORIA</div>
+      <h2>El camino hasta aquí</h2>
+    </div>
+
+    <ol class="timeline">
+      <li>
+        <div class="when mono">JUL 2026 — HOY</div>
+        <div><h3>Practicante de desarrollo de software</h3><p class="where">Universidad Católica de Oriente</p><p>Migraciones, nuevos sistemas en producción y la norma de desarrollo de la oficina de sistemas.</p></div>
+      </li>
+      <li>
+        <div class="when mono">SEP 2025 — HOY</div>
+        <div><h3>Investigador</h3><p class="where">Semillero de Inteligencia Artificial · SENA</p><p>Proyectos de nuevas tecnologías e IA; autor principal de LuxSense.</p></div>
+      </li>
+      <li>
+        <div class="when mono">DIC 2024 — DIC 2025</div>
+        <div><h3>Analista y desarrollador de software</h3><p class="where">Maddeon</p><p>Sistema POS en React con su base de datos, un chatbot con IA y piezas de diseño.</p></div>
+      </li>
+      <li>
+        <div class="when mono">2024 — MAR 2027</div>
+        <div><h3>Tecnología en Análisis y Desarrollo de Software</h3><p class="where">SENA · grado estimado en marzo de 2027</p></div>
+      </li>
+    </ol>
+
+    <div class="skills">
+      <div class="meta">STACK //</div>
+      <ul>
+        <li>Python</li><li>Django</li><li>TypeScript</li><li>Angular</li><li>React</li><li>Oracle</li><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Docker</li><li>Git</li><li>Linux</li><li>Entra ID</li><li>Agentes de IA</li><li class="learning">Rust · aprendiendo</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 04 CONTACTO -->
+  <section id="contacto" class="section contact">
+    <div class="section-head">
+      <span class="kanji" aria-hidden="true">結</span>
+      <div class="meta">04 // CONTACTO</div>
+      <h2>Hablemos</h2>
+    </div>
+    <p class="lede">Estoy abierto a oportunidades como desarrollador. La forma más rápida de contactarme es por correo o LinkedIn.</p>
+    <div class="actions">
+      <a class="btn primary" href="mailto:santig0talvaro@gmail.com">santig0talvaro@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/santiago-otalvaro-539349403/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/Santiago-0t" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span class="jp">創</span>
+  <span class="mono">© <span id="year">2026</span> Santiago Otalvaro Ortega · Hecho a mano, sin plantillas.</span>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

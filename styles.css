@@ -233,3 +233,4 @@ body::after {
   .callout { flex-direction: column; align-items: flex-start; gap: 8px; }
   .awards li { flex-direction: column; gap: 2px; }
 }
+.link + .link { margin-left: 24px; }

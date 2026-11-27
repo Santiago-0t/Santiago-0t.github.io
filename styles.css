@@ -236,3 +236,34 @@ body::after {
 .link + .link { margin-left: 24px; }
 .callout + .callout { margin-top: 16px; }
 .callout .link { margin-top: 10px; }
+
+/* 00 Intro curtain — assembled from the page's own lines, then lifts away */
+html.intro-playing { overflow: hidden; }
+.intro {
+  position: fixed; inset: 0; z-index: 200;
+  background: var(--paper);
+  display: grid; place-items: center;
+  animation: intro-lift .7s cubic-bezier(.76, 0, .24, 1) 2s forwards;
+}
+.intro-inner { display: grid; justify-items: start; gap: 18px; padding: 0 24px; }
+.intro .meta { opacity: 0; animation: intro-up .6s ease .15s forwards; }
+.intro-rule {
+  display: block; height: 1px; width: min(60vw, 420px);
+  background: var(--line);
+  transform: scaleX(0); transform-origin: left;
+  animation: intro-rule .8s cubic-bezier(.76, 0, .24, 1) .45s forwards;
+}
+.intro-kanji {
+  opacity: 0; transform: scale(.9);
+  font-size: clamp(88px, 18vw, 168px); line-height: 1;
+  color: var(--accent);
+  animation: intro-kanji .8s ease .7s forwards;
+}
+.intro-jp { opacity: 0; margin: 0; animation: intro-up .7s ease 1.05s forwards; }
+
+@keyframes intro-up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes intro-rule { to { transform: scaleX(1); } }
+@keyframes intro-kanji { to { opacity: 1; transform: scale(1); } }
+@keyframes intro-lift { to { transform: translateY(-101%); visibility: hidden; pointer-events: none; } }
+
+@media (prefers-reduced-motion: reduce) { .intro { display: none; } }

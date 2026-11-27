@@ -13,6 +13,24 @@
     try { localStorage.setItem('theme', next); } catch (e) { /* storage unavailable */ }
   });
 
+  // Intro curtain: play once per session, then remove so it never blocks the page.
+  const intro = document.getElementById('intro');
+  if (intro) {
+    let seen = false;
+    try { seen = sessionStorage.getItem('intro') === '1'; } catch (e) { /* storage unavailable */ }
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (seen || reduce) {
+      intro.remove();
+    } else {
+      root.classList.add('intro-playing');
+      try { sessionStorage.setItem('intro', '1'); } catch (e) { /* storage unavailable */ }
+      setTimeout(() => {
+        intro.remove();
+        root.classList.remove('intro-playing');
+      }, 2800);
+    }
+  }
+
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 

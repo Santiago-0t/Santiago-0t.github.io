@@ -27,7 +27,7 @@
       setTimeout(() => {
         intro.remove();
         root.classList.remove('intro-playing');
-      }, 2800);
+      }, 3700);
     }
   }
 

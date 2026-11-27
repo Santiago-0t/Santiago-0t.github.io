@@ -237,15 +237,27 @@ body::after {
 .callout + .callout { margin-top: 16px; }
 .callout .link { margin-top: 10px; }
 
-/* 00 Intro curtain — assembled from the page's own lines, then lifts away */
+/* 00 Intro curtain — assembles from the page's own lines, then parts like shoji doors */
 html.intro-playing { overflow: hidden; }
 .intro {
   position: fixed; inset: 0; z-index: 200;
-  background: var(--paper);
+  overflow: hidden;
   display: grid; place-items: center;
-  animation: intro-lift .7s cubic-bezier(.76, 0, .24, 1) 2s forwards;
+  animation: intro-finish 0s linear 3.55s forwards;
 }
-.intro-inner { display: grid; justify-items: start; gap: 18px; padding: 0 24px; }
+/* The opaque paper is the panels, so the doors can slide apart and reveal the hero. */
+.intro-panels { position: absolute; inset: 0; z-index: 0; display: flex; }
+.intro-panels .panel { flex: 1; background: var(--paper); }
+.intro-panels .panel + .panel { border-left: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
+.intro-panels .panel:nth-child(1) { animation: intro-slide-l .9s cubic-bezier(.76, 0, .24, 1) 2.62s forwards; }
+.intro-panels .panel:nth-child(2) { animation: intro-slide-l .9s cubic-bezier(.76, 0, .24, 1) 2.54s forwards; }
+.intro-panels .panel:nth-child(3) { animation: intro-slide-r .9s cubic-bezier(.76, 0, .24, 1) 2.54s forwards; }
+.intro-panels .panel:nth-child(4) { animation: intro-slide-r .9s cubic-bezier(.76, 0, .24, 1) 2.62s forwards; }
+.intro-inner {
+  position: relative; z-index: 1;
+  display: grid; justify-items: start; gap: 18px; padding: 0 24px;
+  animation: intro-text-out .55s cubic-bezier(.76, 0, .24, 1) 2s forwards;
+}
 .intro .meta { opacity: 0; animation: intro-up .6s ease .15s forwards; }
 .intro-rule {
   display: block; height: 1px; width: min(60vw, 420px);
@@ -264,6 +276,9 @@ html.intro-playing { overflow: hidden; }
 @keyframes intro-up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 @keyframes intro-rule { to { transform: scaleX(1); } }
 @keyframes intro-kanji { to { opacity: 1; transform: scale(1); } }
-@keyframes intro-lift { to { transform: translateY(-101%); visibility: hidden; pointer-events: none; } }
+@keyframes intro-text-out { to { opacity: 0; transform: translateY(-22px); } }
+@keyframes intro-slide-l { to { transform: translateX(-100vw); } }
+@keyframes intro-slide-r { to { transform: translateX(100vw); } }
+@keyframes intro-finish { to { visibility: hidden; pointer-events: none; } }
 
 @media (prefers-reduced-motion: reduce) { .intro { display: none; } }
